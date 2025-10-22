@@ -17,8 +17,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <section class="bg-green-100 p-3 flex items-center justify-between sticky top-0 z-10 shadow-2xl">
         <h1 class="text-3xl font-bold">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class=" w-6 h-6 md:hidden">
+        <svg id="navicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class=" w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -31,51 +31,66 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         
     </section>
 
+    <!-- side navbar-->
+
+    <section id="sidenavsection" class=" bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100lvh; right: -50%;">
+        <div class="text-right">
+                <p id="sidenavclose" class="cursor-pointer p-5">X</p>
+        </div>
+        <ul class=" flex flex-col text-gray-600 gap-10 items-center">
+            
+                <li><a href="./index.html" class="hover:text-black hover:underline">Home</a></li>
+                <li><a href="./product.html" class="hover:text-black hover:underline">Product</a></li>
+                <li><a href="./contact.html" class="hover:text-black hover:underline">Contact</a></li>
+            </ul>
+    </section>
+
+    
     <!--products-->
 
     <section class="text-center m-4 ">
         <h2 class="text-3xl font-bold p-5">Products</h2>
-        <input type="text" class="border border-black p-2 m-2 mb-7" style="width: 80%;" placeholder="Search for Products">
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <input id="search" type="text" class="border border-black p-2 m-2 mb-7" style="width: 80%;" placeholder="Search for Products">
+        <div id="product-container" class="grid grid-cols-2 gap-3 md:grid-cols-4">
             <div>
                 <img src="./images/bestseller_1.jpg" alt="Succelent" class=" inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Succelent</p>
+                <h3>Succelent</h3>
                 <p>$30</p>
             </div>
 
             <div>
                 <img src="./images/bestseller_9.jpg" alt="Lotus" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Lotus</p>
+                <h3>Lotus</h3>
                 <p>$50</p>
             </div>
             <div>
                 <img src="./images/bestseller_3.jpg" alt="Monsteria" class=" inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Monsteria</p>
+                <h3>Monsteria</h3>
                 <p>$40</p>
             </div>
             <div>
                 <img src="./images/bestseller_4.jpg" alt="Snake plant" class=" inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Snake plant</p>
+                <h3>Snake plant</h3>
                 <p>$30</p>
             </div>
             <div>
                 <img src="./images/bestseller_5.jpg" alt="Hanging plant" class=" inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Hanging plants</p>
+                <h3>Hanging plants</h3>
                 <p>$40</p>
             </div>
             <div>
                 <img src="./images/bestseller_6.jpg" alt="Flowering plant" class=" inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Flowering plant</p>
+                <h3>Flowering plant</h3>
                 <p>$30</p>
             </div>
             <div>
                 <img src="./images/bestseller_7.jpg" alt="Indoor plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Indoor plant</p>
+                <h3>Indoor plant</h3>
                 <p>$30</p>
             </div>
             <div>
                 <img src="./images/bestseller_8.jpg" alt="Syngonium" class="inline hover:shadow-xl transform hover:-translate-y-2">
-                <p>Syngonium</p>
+                <h3>Syngonium</h3>
                 <p>$20</p>
             </div>
         </div>
@@ -87,5 +102,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>@ 2021 Greenden.com</p>
     </section>
+
+    <script src="./product.js"></script>
 </body>
 </html>
